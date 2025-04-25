@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .mainContainer {
+            transform: perspective(1000px);
+            transform-style: preserve-3d;
+            animation: ani 5s linear infinite;
+        }
+        @keyframes ani {
+            0% {
+                transform: rotateX(-30deg) rotateY(0deg);
+            }
+            100% {
+                transform: rotateX(-30deg) rotateY(360deg);
+            }
+        }
+        .container1, .container2, .container3, .container4, .container5, .container6 {
+            display: flex;
+            max-width: 300px;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: absolute;
+        }
+        .container1 {
+            margin: 300px 0 0 430px;
+            transform: rotateY(90deg);
+        }
+        .container2 {
+            margin: 180px 0 0 590px;
+            transform: rotateX(90deg);
+        }
+        .container3 {
+            margin: 440px 0 0 580px;
+            transform: rotateX(90deg);
+        }
+        .container4 {
+            margin: 315px 0 0 680px;
+            transform: rotateY(90deg) translateX(20px);
+        }
+        .container5 {
+            margin: 307px 0 0 590px;
+            transform: translateZ(145px);
+        }
+        .container6 {
+            margin: 307px 0 0 590px;
+            transform: translateZ(-120px);
+        }
+        .a1, .a2, .a3, .a4, .a5, .a6 {
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+        .a1 { background-color: #FF5733; }
+        .a2 { background-color: #3498DB; }
+        .a3 { background-color: #2ECC71; }
+        .a4 { background-color: #9B59B6; }
+        .a5 { background-color: #E74C3C; transform: translateY(-10px); }
+        .a6 { background-color: #F1C40F; }
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="container1"></div>
+        <div class="container2"></div>
+        <div class="container3"></div>
+        <div class="container4"></div>
+        <div class="container5"></div>
+        <div class="container6"></div>
+    </div>
+
+    <script>
+        // Function to create and append divs
+        function createDivs(containerSelector, className) {
+            const container = document.querySelector(containerSelector);
+            for (let i = 1; i <= 9; i++) {
+                const newDiv = document.createElement('div');
+                newDiv.className = className;
+                container.appendChild(newDiv);
+            }
+        }
+
+        // Create divs for each container
+        createDivs('.container1', 'a1');
+        createDivs('.container2', 'a2');
+        createDivs('.container3', 'a3');
+        createDivs('.container4', 'a4');
+        createDivs('.container5', 'a5');
+        createDivs('.container6', 'a6');
+    </script>
+</body>
+</html>
