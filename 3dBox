@@ -11,7 +11,7 @@
         .mainContainer {
             transform: perspective(1000px);
             transform-style: preserve-3d;
-            animation: ani 5s linear infinite;
+            animation: ani 4s linear infinite;
         }
         @keyframes ani {
             0% {
@@ -29,24 +29,24 @@
             position: absolute;
         }
         .container1 {
-            margin: 300px 0 0 430px;
-            transform: rotateY(90deg);
+            margin: 307px 0 0 465px;
+            transform: rotateY(90deg) translateX(31px) translateZ(-30px);
         }
         .container2 {
-            margin: 180px 0 0 590px;
-            transform: rotateX(90deg);
+            margin: 183px 0 0 590px;
+            transform: rotateX(90deg) ;
         }
         .container3 {
-            margin: 440px 0 0 580px;
+            margin: 432px 0 0 590px;
             transform: rotateX(90deg);
         }
         .container4 {
-            margin: 315px 0 0 680px;
-            transform: rotateY(90deg) translateX(20px);
+            margin: 307px 0 0 695px;
+            transform:  rotateY(90deg) translateX(35px) translateZ(-20px);
         }
         .container5 {
-            margin: 307px 0 0 590px;
-            transform: translateZ(145px);
+            margin: 316px 0 0 590px;
+            transform: translateZ(130px);
         }
         .container6 {
             margin: 307px 0 0 590px;
@@ -57,12 +57,14 @@
             width: 70px;
             border-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            position: relative;
+            
         }
         .a1 { background-color: #FF5733; }
-        .a2 { background-color: #3498DB; }
+        .a2 { background-color: #13069c; }
         .a3 { background-color: #2ECC71; }
         .a4 { background-color: #9B59B6; }
-        .a5 { background-color: #E74C3C; transform: translateY(-10px); }
+        .a5 { background-color: #bbc4b3; transform: translateY(-10px); }
         .a6 { background-color: #F1C40F; }
     </style>
 </head>
