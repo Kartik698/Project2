@@ -79,7 +79,7 @@
     </div>
 
     <script>
-        // Function to create and append divs
+        // A function which is used to create the new divs which take a container class or take a class as arguments 
         function createDivs(containerSelector, className) {
             const container = document.querySelector(containerSelector);
             for (let i = 1; i <= 9; i++) {
@@ -89,7 +89,7 @@
             }
         }
 
-        // Create divs for each container
+        // Calling the function to create the new divs for a new class
         createDivs('.container1', 'a1');
         createDivs('.container2', 'a2');
         createDivs('.container3', 'a3');
